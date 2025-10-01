@@ -80,9 +80,12 @@
                 </h1>
                 
                 <p class="text-gray-600 mb-6 text-lg">
-                    Es tu día mi amor y vas a escoger tu regalo. 
-                    Para esocoger tu regalo debes estar 100% dispuesta a nuevas experiencias!!
+                    Es tu día mi amor y vas a escoger tu regalo🌹.
                 </p>
+                <p class="text-gray-600 mb-6 text-lg">
+                    ¡Ojo! Antes de esocoger tu regalo debes estar 100% segura y dispuesta a nuevas experiencias!!❤️🔥.
+                </p>
+            
                 
                 <div class="space-y-4">
                     <button 
@@ -570,9 +573,9 @@
 
                                 <!-- Apartado adicional 1 -->
                                 <div class="flex items-start space-x-3 p-3 border border-gray-200 rounded-lg hover:bg-white transition-colors mb-3">
-                                    <input type="checkbox" id="additional-1-option" class="mt-1 rounded border-gray-300 text-pink-500 focus:ring-pink-500">
+                                    <input type="checkbox" id="additional-1-option-2" class="mt-1 rounded border-gray-300 text-pink-500 focus:ring-pink-500">
                                     <div class="flex-1">
-                                        <label for="additional-1-option" class="text-gray-600 cursor-pointer block mb-2">
+                                        <label for="additional-1-option-2" class="text-gray-600 cursor-pointer block mb-2">
                                             Hotel Metropolis
                                         </label>
                                         <a href="https://www.instagram.com/hmetropolisec?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" 
@@ -588,9 +591,9 @@
 
                                 <!-- Apartado adicional 2 -->
                                 <div class="flex items-start space-x-3 p-3 border border-gray-200 rounded-lg hover:bg-white transition-colors">
-                                    <input type="checkbox" id="additional-2-option" class="mt-1 rounded border-gray-300 text-pink-500 focus:ring-pink-500">
+                                    <input type="checkbox" id="additional-2-option-2" class="mt-1 rounded border-gray-300 text-pink-500 focus:ring-pink-500">
                                     <div class="flex-1">
-                                        <label for="additional-2-option" class="text-gray-600 cursor-pointer block mb-2">
+                                        <label for="additional-2-option-2" class="text-gray-600 cursor-pointer block mb-2">
                                             Hotel El Rosal
                                         </label>
                                         <a href="https://www.instagram.com/hotelelrosalec?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" 
@@ -636,8 +639,12 @@
                 
                 <p class="text-gray-600 mb-6 text-lg">
                     Para confirmar tu elección debes hacer una captura y mandárselo al amor de tu vida ❤️.
-                    En caso de cualquier dua preguntar al amor de tu vida!!.
-                    ¡Prepárate para unas sorpresas increíbles!
+                </p>
+                <p class="text-gray-600 mb-6 text-lg">
+                    En caso de cualquier duda, preguntar al amor de tu vida!!.
+                </p>
+                <p class="text-gray-600 mb-6 text-lg">
+                    ¡Prepárate para una sorpresa increíble!
                 </p>
                 
                 <div id="selectedGifts" class="mb-6 p-4 bg-pink-50 rounded-lg">
@@ -662,7 +669,13 @@
                         ¡Selección Confirmada!
                     </h1>
                     <p class="text-gray-600 mb-6">
-                        Tu regalo ha sido registrado perfectamente
+                        Para confirmar tu elección debes hacer una captura y mandárselo al amor de tu vida ❤️.
+                    </p>
+                    <p class="text-gray-600 mb-6">
+                        En caso de cualquier duda, preguntar al amor de tu vida!!.
+                    </p>
+                    <p class="text-gray-600 mb-6">
+                        ¡Prepárate para una sorpresa increíble!
                     </p>
                     
                     <div id="selectedGifts" class="text-left bg-gray-50 rounded-lg p-4 mb-6">
@@ -856,14 +869,16 @@
                 checkedItems.push('🏨 Hotel Arenal');
             }
             
-            // Checkboxes adicionales (hay duplicados en el HTML, usamos los primeros)
-            const additional1 = document.querySelector('#additional-1-option');
-            const additional2 = document.querySelector('#additional-2-option');
+            // Checkboxes adicionales (verificar ambos sets)
+            const additional1First = document.querySelector('#additional-1-option');
+            const additional1Second = document.querySelector('#additional-1-option-2');
+            const additional2First = document.querySelector('#additional-2-option');
+            const additional2Second = document.querySelector('#additional-2-option-2');
             
-            if (additional1?.checked) {
+            if (additional1First?.checked || additional1Second?.checked) {
                 checkedItems.push('🏨 Hotel Metropolis');
             }
-            if (additional2?.checked) {
+            if (additional2First?.checked || additional2Second?.checked) {
                 checkedItems.push('🏨 Hotel El Rosal');
             }
 
